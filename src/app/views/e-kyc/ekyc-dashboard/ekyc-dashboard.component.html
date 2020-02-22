@@ -1,0 +1,27 @@
+<div class="accordion" id="accordionExample">
+  <div *ngFor="let section of allSections; let ind = index" class="card">
+    <div class="card-header row mx-0" style="justify-content: space-between;" [id]="'heading'+ section.sectionId"
+      data-toggle="collapse" [attr.data-target]="'#collapse' + section.sectionId" aria-expanded="true"
+      aria-controls="collapseOne" (click)="toggleCollapse(ind)">
+      <h3 class="mb-0 text-primary py-2 font-weight-bold" style="font-size: 17px !important;">
+        <span>
+          {{section.sectionName}}
+        </span>
+      </h3>
+      <i [ngClass]="collapse[ind] ? 'fa fa-minus mt-2' : 'fa fa-plus mt-2'" aria-hidden="true"></i>
+    </div>
+    <div [id]="'collapse' + section.sectionId" class=""
+      [ngClass]="section.sectionId === 1 ? 'collapse show' : 'collapse'"
+      [attr.aria-labelledby]="'heading' + section.sectionId" data-parent="#accordionExample">
+      <div class="card-body" style="overflow-x: auto;">
+        <app-kyc-table [tableData]="sectionData"
+          [columnHeaders]="['Region', 'Area', 'Name', 'Shop Name', 'Address', 'MSISDN', 'Last Updated On']"
+          [section]="section.sectionName"
+          (pageChanged)="pageChanged($event, ind)"
+          [profileCount]="profileCount"
+          >
+        </app-kyc-table>
+      </div>
+    </div>
+  </div>
+</div>

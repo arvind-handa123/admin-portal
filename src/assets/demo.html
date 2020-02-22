@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>YABX</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <script>window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam.nr-data.net", "errorBeacon": "bam.nr-data.net", "licenseKey": "ca38a454ac", "applicationID": "390115114", "transactionName": "dl0NQUsOWw5cQ0sXA01GPFhcEkQDXlQ7AAdYQgJcXg9ETVBfAAYe", "queueTime": 0, "applicationTime": 135, "agent": "" }</script>
+  <script>(window.NREUM || (NREUM = {})).loader_config = { licenseKey: "ca38a454ac", applicationID: "390115114" }; window.NREUM || (NREUM = {}), __nr_require = function (e, n, t) { function r(t) { if (!n[t]) { var i = n[t] = { exports: {} }; e[t][0].call(i.exports, function (n) { var i = e[t][1][n]; return r(i || n) }, i, i.exports) } return n[t].exports } if ("function" == typeof __nr_require) return __nr_require; for (var i = 0; i < t.length; i++)r(t[i]); return r }({ 1: [function (e, n, t) { function r() { } function i(e, n, t) { return function () { return o(e, [u.now()].concat(f(arguments)), n ? null : this, t), n ? void 0 : this } } var o = e("handle"), a = e(4), f = e(5), c = e("ee").get("tracer"), u = e("loader"), s = NREUM; "undefined" == typeof window.newrelic && (newrelic = s); var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"], l = "api-", d = l + "ixn-"; a(p, function (e, n) { s[n] = i(l + n, !0, "api") }), s.addPageAction = i(l + "addPageAction", !0), s.setCurrentRouteName = i(l + "routeName", !0), n.exports = newrelic, s.interaction = function () { return (new r).get() }; var m = r.prototype = { createTracer: function (e, n) { var t = {}, r = this, i = "function" == typeof n; return o(d + "tracer", [u.now(), e, t], r), function () { if (c.emit((i ? "" : "no-") + "fn-start", [u.now(), r, i], t), i) try { return n.apply(this, arguments) } catch (e) { throw c.emit("fn-err", [arguments, this, e], t), e } finally { c.emit("fn-end", [u.now()], t) } } } }; a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, n) { m[n] = i(d + n) }), newrelic.noticeError = function (e, n) { "string" == typeof e && (e = new Error(e)), o("err", [e, u.now(), !1, n]) } }, {}], 2: [function (e, n, t) { function r(e, n) { var t = e.getEntries(); t.forEach(function (e) { "first-paint" === e.name ? c("timing", ["fp", Math.floor(e.startTime)]) : "first-contentful-paint" === e.name && c("timing", ["fcp", Math.floor(e.startTime)]) }) } function i(e, n) { var t = e.getEntries(); t.length > 0 && c("lcp", [t[t.length - 1]]) } function o(e) { if (e instanceof s && !l) { var n, t = Math.round(e.timeStamp); n = t > 1e12 ? Date.now() - t : u.now() - t, l = !0, c("timing", ["fi", t, { type: e.type, fid: n }]) } } if (!("init" in NREUM && "page_view_timing" in NREUM.init && "enabled" in NREUM.init.page_view_timing && NREUM.init.page_view_timing.enabled === !1)) { var a, f, c = e("handle"), u = e("loader"), s = NREUM.o.EV; if ("PerformanceObserver" in window && "function" == typeof window.PerformanceObserver) { a = new PerformanceObserver(r), f = new PerformanceObserver(i); try { a.observe({ entryTypes: ["paint"] }), f.observe({ entryTypes: ["largest-contentful-paint"] }) } catch (p) { } } if ("addEventListener" in document) { var l = !1, d = ["click", "keydown", "mousedown", "pointerdown", "touchstart"]; d.forEach(function (e) { document.addEventListener(e, o, !1) }) } } }, {}], 3: [function (e, n, t) { function r(e, n) { if (!i) return !1; if (e !== i) return !1; if (!n) return !0; if (!o) return !1; for (var t = o.split("."), r = n.split("."), a = 0; a < r.length; a++)if (r[a] !== t[a]) return !1; return !0 } var i = null, o = null, a = /Version\/(\S+)\s+Safari/; if (navigator.userAgent) { var f = navigator.userAgent, c = f.match(a); c && f.indexOf("Chrome") === -1 && f.indexOf("Chromium") === -1 && (i = "Safari", o = c[1]) } n.exports = { agent: i, version: o, match: r } }, {}], 4: [function (e, n, t) { function r(e, n) { var t = [], r = "", o = 0; for (r in e) i.call(e, r) && (t[o] = n(r, e[r]), o += 1); return t } var i = Object.prototype.hasOwnProperty; n.exports = r }, {}], 5: [function (e, n, t) { function r(e, n, t) { n || (n = 0), "undefined" == typeof t && (t = e ? e.length : 0); for (var r = -1, i = t - n || 0, o = Array(i < 0 ? 0 : i); ++r < i;)o[r] = e[n + r]; return o } n.exports = r }, {}], 6: [function (e, n, t) { n.exports = { exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart } }, {}], ee: [function (e, n, t) { function r() { } function i(e) { function n(e) { return e && e instanceof r ? e : e ? c(e, f, o) : o() } function t(t, r, i, o) { if (!l.aborted || o) { e && e(t, r, i); for (var a = n(i), f = v(t), c = f.length, u = 0; u < c; u++)f[u].apply(a, r); var p = s[y[t]]; return p && p.push([b, t, r, a]), a } } function d(e, n) { h[e] = v(e).concat(n) } function m(e, n) { var t = h[e]; if (t) for (var r = 0; r < t.length; r++)t[r] === n && t.splice(r, 1) } function v(e) { return h[e] || [] } function g(e) { return p[e] = p[e] || i(t) } function w(e, n) { u(e, function (e, t) { n = n || "feature", y[t] = n, n in s || (s[n] = []) }) } var h = {}, y = {}, b = { on: d, addEventListener: d, removeEventListener: m, emit: t, get: g, listeners: v, context: n, buffer: w, abort: a, aborted: !1 }; return b } function o() { return new r } function a() { (s.api || s.feature) && (l.aborted = !0, s = l.backlog = {}) } var f = "nr@context", c = e("gos"), u = e(4), s = {}, p = {}, l = n.exports = i(); l.backlog = s }, {}], gos: [function (e, n, t) { function r(e, n, t) { if (i.call(e, n)) return e[n]; var r = t(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(e, n, { value: r, writable: !0, enumerable: !1 }), r } catch (o) { } return e[n] = r, r } var i = Object.prototype.hasOwnProperty; n.exports = r }, {}], handle: [function (e, n, t) { function r(e, n, t, r) { i.buffer([e], r), i.emit(e, n, t) } var i = e("ee").get("handle"); n.exports = r, r.ee = i }, {}], id: [function (e, n, t) { function r(e) { var n = typeof e; return !e || "object" !== n && "function" !== n ? -1 : e === window ? 0 : a(e, o, function () { return i++ }) } var i = 1, o = "nr@id", a = e("gos"); n.exports = r }, {}], loader: [function (e, n, t) { function r() { if (!x++) { var e = E.info = NREUM.info, n = d.getElementsByTagName("script")[0]; if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && n)) return s.abort(); u(y, function (n, t) { e[n] || (e[n] = t) }), c("mark", ["onload", a() + E.offset], null, "api"); var t = d.createElement("script"); t.src = "https://" + e.agent, n.parentNode.insertBefore(t, n) } } function i() { "complete" === d.readyState && o() } function o() { c("mark", ["domContent", a() + E.offset], null, "api") } function a() { return O.exists && performance.now ? Math.round(performance.now()) : (f = Math.max((new Date).getTime(), f)) - E.offset } var f = (new Date).getTime(), c = e("handle"), u = e(4), s = e("ee"), p = e(3), l = window, d = l.document, m = "addEventListener", v = "attachEvent", g = l.XMLHttpRequest, w = g && g.prototype; NREUM.o = { ST: setTimeout, SI: l.setImmediate, CT: clearTimeout, XHR: g, REQ: l.Request, EV: l.Event, PR: l.Promise, MO: l.MutationObserver }; var h = "" + location, y = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-1167.min.js" }, b = g && w && w[m] && !/CriOS/.test(navigator.userAgent), E = n.exports = { offset: f, now: a, origin: h, features: {}, xhrWrappable: b, userAgent: p }; e(1), e(2), d[m] ? (d[m]("DOMContentLoaded", o, !1), l[m]("load", r, !1)) : (d[v]("onreadystatechange", i), l[v]("onload", r)), c("mark", ["firstbyte", f], null, "api"); var x = 0, O = e(6) }, {}], "wrap-function": [function (e, n, t) { function r(e) { return !(e && e instanceof Function && e.apply && !e[a]) } var i = e("ee"), o = e(5), a = "nr@original", f = Object.prototype.hasOwnProperty, c = !1; n.exports = function (e, n) { function t(e, n, t, i) { function nrWrapper() { var r, a, f, c; try { a = this, r = o(arguments), f = "function" == typeof t ? t(r, a) : t || {} } catch (u) { l([u, "", [r, a, i], f]) } s(n + "start", [r, a, i], f); try { return c = e.apply(a, r) } catch (p) { throw s(n + "err", [r, a, p], f), p } finally { s(n + "end", [r, a, c], f) } } return r(e) ? e : (n || (n = ""), nrWrapper[a] = e, p(e, nrWrapper), nrWrapper) } function u(e, n, i, o) { i || (i = ""); var a, f, c, u = "-" === i.charAt(0); for (c = 0; c < n.length; c++)f = n[c], a = e[f], r(a) || (e[f] = t(a, u ? f + i : i, o, f)) } function s(t, r, i) { if (!c || n) { var o = c; c = !0; try { e.emit(t, r, i, n) } catch (a) { l([a, t, r, i]) } c = o } } function p(e, n) { if (Object.defineProperty && Object.keys) try { var t = Object.keys(e); return t.forEach(function (t) { Object.defineProperty(n, t, { get: function () { return e[t] }, set: function (n) { return e[t] = n, n } }) }), n } catch (r) { l([r]) } for (var i in e) f.call(e, i) && (n[i] = e[i]); return n } function l(n) { try { e.emit("internal-error", n) } catch (t) { } } return e || (e = i), t.inPlace = u, t.flag = a, t } }, {}] }, {}, ["loader"]);</script>
+  <meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token"
+    content="pVKaTX2oYrJbG+6Kdnlx8vPBEAslvq+229smmCUw/rpH2VXTFXf4ZKmtJK5gnQla3PywATLQgeJRXzqRSnQvKQ==" />
+  <meta name="action-cable-url" content="/cable" />
+
+  <link href='https://fonts.googleapis.com/css?family=Asap|Questrial' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" media="all"
+    href="/assets/application-13ac2de109b2521d74e538c43cba34d17e8685b70065bf6864688651f226d60a.css"
+    data-turbolinks-track="true" />
+  <link rel="stylesheet" media="all"
+    href="/assets/eye-candy-668dcfa583e359e32763ed34753ba71315b6aa4f6d51f022e655693cee32e1ee.css"
+    data-turbolinks-track="true" />
+  <link rel="stylesheet" media="all"
+    href="/assets/charts-0c0b2f93a5ebd5ecf2083f5c94185987393ee651ca5ec4d3ed3cef74ebdf09c2.css"
+    data-turbolinks-track="true" />
+  <script src="/assets/application-05d9637109deb477b067af186cc557d478acf60e6fa7938e24bc12e7cabc62a4.js"
+    data-turbolinks-track="true"></script>
+
+
+  <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+  <script src="/ansi_up.js"></script>
+  <script src="/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/theme-solarized_light.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/mode-ruby.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/mode-html_ruby.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/clipboard.min.js"></script>
+
+</head>
+
+<body data-init="LayoutFormatter,Notes,ClipboardHandler">
+  <nav class="navbar navbar-full navbar-fixed-top navbar-light bg-faded" data-init="NavHandler">
+    <div class="nav navbar-nav">
+      <button class="navbar-brand navbar-toggler hidden-sm-up" type="button" data-toggle="collapse"
+        data-target="#exCollapsingNavbar">&#9776;</button>
+
+
+      <ul class="nav navbar-nav hidden-sm-down">
+        <li class="navbar-brand">
+          <a class="" href="/"> <img src="/yabx.png" height="30em">
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-tachometer"></i></a>
+          <div class="dropdown-menu">
+            <a class="nav-link" rel="nofollow" data-method="put" href="/users/41?dashboard=accounting">Accounting</a>
+            <a class="nav-link" rel="nofollow" data-method="put" href="/users/41?dashboard=activity">Activity</a>
+            <a class="nav-link" rel="nofollow" data-method="put" href="/users/41?dashboard=demo">Demo</a>
+            <a class="nav-link" rel="nofollow" data-method="put" href="/users/41?dashboard=platform">Platform</a>
+            <a class="nav-link" href="/reports"><i class="fa fa-bar-chart small text-muted"></i> Reports</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Engagement</a>
+          <div class="dropdown-menu">
+            <a class="nav-link" href="/ussd_journeys">USSD Journeys</a>
+            <a class="nav-link" href="/ussd_mockups">USSD Mockups</a>
+            <a class="nav-link" href="/sms_journeys">SMS Journeys</a>
+            <a class="nav-link" href="/text_message_campaigns">SMS Campaigns</a>
+            <a class="nav-link" href="/translations">Translations</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">History</a>
+          <div class="dropdown-menu">
+            <a class="nav-link" href="/customers">Customers</a>
+            <a class="nav-link" href="/instruments">Loans</a>
+            <a class="nav-link" href="/ussd_sessions">USSD Sessions</a>
+            <a class="nav-link" href="/disbursements">Disbursements</a>
+            <a class="nav-link" href="/receipts">Receipts</a>
+            <a class="nav-link" href="/deposits">Deposits</a>
+            <a class="nav-link" href="/reports"><i class="fa fa-bar-chart small text-muted"></i> Reports</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Controls</a>
+          <div class="dropdown-menu">
+            <a class="nav-link" href="/reconciliations">Reconciliations</a>
+            <a class="nav-link" href="/fixes">Automated Fixes</a>
+            <a class="nav-link" href="/accounting_transactions/uncleared_suspense_entries">In suspense</a>
+            <a class="nav-link" href="/lifecycles/stalled">Stalled</a>
+            <a class="nav-link" href="/mno_interactions/blocked">Blocked Transactions</a>
+            <a class="nav-link" href="/accounting_transactions">Manual Entries</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Treasury</a>
+          <div class="dropdown-menu">
+            <a class="nav-link" href="/funding_sources">Funding</a>
+            <a class="nav-link" href="/wallets">Wallets</a>
+            <a class="nav-link" href="/wallet_thresholds">Wallet threshold</a>
+            <a class="nav-link" href="/banks">Bank Accounts</a>
+            <a class="nav-link" href="/products">Products</a>
+            <a class="nav-link" href="/scorecards">Scorecards</a>
+            <a class="nav-link" href="/accounting_accounts">Accounts</a>
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Handsets</a>
+          <div class="dropdown-menu">
+            <a class="nav-link" href="/reports/handset_repayments">Repayments</a>
+            <a class="nav-link" href="/handsets/new">Register</a>
+            <a class="nav-link" href="/handsets">Handsets</a>
+            <a class="nav-link" href="/handset_registrations">Registrations</a>
+          </div>
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Admin</a>
+          <div class="dropdown-menu">
+            <a class="nav-link" href="/history">Changesets</a>
+            <a class="nav-link" href="/products">Products</a>
+            <a class="nav-link" href="/documents">Documents</a>
+            <a class="nav-link" href="/uploads">Data Uploads</a>
+            <a class="nav-link" href="/partners/set_ussd_endpoint">Use ZA USSD</a>
+            <a class="nav-link" href="/jobs">Jobs</a>
+            <a class="nav-link" href="/events">Events</a>
+            <a class="nav-link" href="/api_submissions">API Submissions</a>
+            <a class="nav-link" href="/test_networks">Test Networks</a>
+            <a class="nav-link" href="/test_wallets">Test Wallets</a>
+            <a class="nav-link" href="/custom_reports">Custom Reports</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="nav navbar-nav pull-xs-right">
+      <li class="nav-item dropdown hidden-sm-down">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Yabx AF</a>
+        <div class="dropdown-menu">
+          <a class="nav-link" rel="nofollow" data-method="put" href="/users/41?partner_code=sasa">YABX</a>
+          <a class="nav-link" rel="nofollow" data-method="put" href="/users/41?partner_code=Acmc+TZ">Acmc TZ</a>
+          <a class="nav-link" rel="nofollow" data-method="put"
+            href="/users/41?partner_code=Airtelpreprd+MW">Airtelpreprd MW</a>
+          <a class="nav-link" rel="nofollow" data-method="put" href="/users/41?partner_code=Airtel+MW">Airtel MW</a>
+          <a class="nav-link" rel="nofollow" data-method="put" href="/users/41?partner_code=SandboX">Sandbox</a>
+          <a class="nav-link" rel="nofollow" data-method="put" href="/users/41?partner_code=Sasa+ZA">YABX ZA</a>
+          <a class="nav-link" rel="nofollow" data-method="put" href="/users/41?partner_code=Yabx+IN">Yabx IN</a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-item nav-link" href="#">
+          <i class="fa fa-users small text-muted" data-nav-url="/customers"></i>
+          <i class="fa fa-files-o small text-muted" data-nav-url="/instruments"></i>
+          <i class="fa fa-tty small text-muted" data-nav-url="/ussd_sessions"></i>
+          <i class="" data-nav-url="/credit_rules"> Credit Rules</i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <form class="form-inline" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden"
+            value="&#x2713;" /><input type="text" name="search" id="search" class="nav-item form-control"
+            style="width:9em;height:1.7em;margin-top:0.3em;" placeholder="Search" pattern=".{4,}" /></form>
+      </li>
+      <li class="nav-item">
+        <a class="nav-item nav-link" href="#">
+          <i class="fa fa-bell-o text-muted"></i>
+          <i id="logInOut" class="fa" data-toggle="tooltip" data-placement="bottom"></i>
+        </a>
+      </li>
+    </ul>
+
+  </nav>
+
+
+  <div class="collapse" id="exCollapsingNavbar">
+    <div class='nav-collapse p-l-1 p-r-1'>
+      <div class="btn-group btn-group-sm p-b-1" role="group">
+        <a class="btn btn-secondary" href="/" role="button">Home</a>
+        <a class="btn btn-secondary" href="/customers" role="button">Customers</a>
+        <a class="btn btn-secondary" href="/instruments" role="button">Loans</a>
+        <a class="btn btn-secondary" href="/ussd_sessions" role="button">USSD</a>
+      </div>
+      <div class="btn-group btn-group-sm p-b-1" role="group">
+        <a class="btn btn-secondary" href="/products" role="button">Funding</a>
+        <a class="btn btn-secondary" href="/reconciliations" role="button">Reconciliations</a>
+        <a class="btn btn-secondary" href="/fixes" role="button">Automated Fixes</a>
+        <a class="btn btn-secondary" href="/accounting_accounts" role="button">Accounts</a>
+        <a class="btn btn-secondary" href="/disbursements" role="button">Disbursements</a>
+        <a class="btn btn-secondary" href="/receipts" role="button">Receipts</a>
+      </div>
+      <div class="btn-group btn-group-sm p-b-1" role="group">
+        <a class="btn btn-secondary" href="/jobs" role="button">Jobs</a>
+        <a class="btn btn-secondary" href="/translations" role="button">Translations</a>
+        <a class="btn btn-secondary" href="/ussd_journeys" role="button">USSD Journeys</a>
+        <a class="btn btn-secondary" href="/ussd_mockups" role="button">Ussd Mockups</a>
+        <a class="btn btn-secondary" href="/time_series">Time Series</a>
+        <a class="btn btn-secondary" href="/text_messages">Text Messages</a>
+        <a class="btn btn-secondary" href="/reports">Reports</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-muted"
+    style="cursor: pointer; position: fixed; top: 70px;left: 0; background-color: #E6E7E8; padding-left: 3px; padding-right: 5px; border-top-right-radius: 4px; border-bottom-right-radius: 4px;">
+    <i id="notes-page" class="fa fa-map-o fa-fw" style=""></i><br />
+  </div>
+  <div class="container page-body text_message_campaigns-controller">
+
+
+    <div class="m-b-1"
+      style="display:none; min-height: 100px; border-radius: 10px; border: 0.5px solid #E6E7E8; padding: 20px;"
+      id="documentation">
+      <div class="body-content">
+        <div class="container" style="display:none;">
+
+        </div>
+        <p class="no-doc" style="">No documentation has been created for this page.</p>
+        <button type="button" class="btn btn-primary btn-sm m-t-1" data-toggle="modal"
+          data-target="#documentation_modal">Create</button>
+      </div>
+      <i class="body-wait fa fa-spinner fa-5x fa-spin" style="display:none;"></i>
+    </div>
+
+
+    <div id="documentation_modal" class="modal fade" data-controller="text_message_campaigns" data-action="index">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+            <h4 class="modal-title titleize">text_message_campaigns: index page</h4>
+          </div>
+          <div class="modal-body">
+            <textarea class="documentation-body" style="min-width: 100%; min-height: 100px;"></textarea>
+            <p>
+              # Headings 1 ## Heading 2 *<b>bold</b>* _<i>italics</i>_ 1. List <a
+                href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">more</a>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary save-button">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1><i class="fa fa-comments-o small text-muted"></i> SMS Campaigns <span
+        onclick='$(".new-text-message-campaign").toggle();' style="cursor:pointer;color:blue;font-size: 40%;">add</span>
+    </h1>
+
+    <div class="new-text-message-campaign m-b-1" style="display:none;">
+      <div>
+        <form class="form-inline" action="/text_message_campaigns" accept-charset="UTF-8" method="post"><input
+            name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token"
+            value="4wH8z2CCCBdAYCe2Dud5L/3tUXofZ4qQucEDNQTBfv1BAx10j4LY+BrArfdmw0LVA0TWy7aw3s8ldMQCePN4fw==" />
+          <div class="form-group">
+            <label for="new-text-message-campaign-name">Title</label>
+            <input name="title" type="text" class="form-control form-control-sm" id="new-text-message-campaign-name"
+              placeholder="eg First campaign" pattern="\w{2,}" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-sm">Create</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="sms_campaign_listing">
+      <table>
+        <tr>
+          <th>Status</th>
+
+          <th>Title</th>
+          <th>Campaign Type</th>
+          <th>Approved</th>
+          <th>Scheduled</th>
+          <th>Campaign Duration</th>
+          <th>Send SMS</th>
+          <th>Sent</th>
+          <th>Messages</th>
+          <th>Generated</th>
+          <th>Dispatched</th>
+          <th>Delivered</th>
+          <th>Cost</th>
+          <th></th>
+          <th></th>
+        </tr>
+
+        <tr>
+          <td class="created">Created</td>
+
+          <td class="titleize">testcampaign</td>
+          <td class="titleize">marketing</td>
+          <td class="time"></td>
+          <td class="time"></td>
+          <td class="time"> - </td>
+          <td class="titleize">false</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/47"></a></td>
+
+        </tr>
+        <tr>
+          <td class="created">Created</td>
+
+          <td class="titleize">hello</td>
+          <td class="titleize">marketing</td>
+          <td class="time"></td>
+          <td class="time"></td>
+          <td class="time"> - </td>
+          <td class="titleize">false</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/46"></a></td>
+
+        </tr>
+        <tr>
+          <td class="created">Created</td>
+
+          <td class="titleize">Test_arpan2</td>
+          <td class="titleize">marketing</td>
+          <td class="time"></td>
+          <td class="time"></td>
+          <td class="time">2020-02-02 00:00:00 UTC - </td>
+          <td class="titleize">false</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/45"></a></td>
+
+        </tr>
+        <tr>
+          <td class="created">Created</td>
+
+          <td class="titleize">test1</td>
+          <td class="titleize">marketing</td>
+          <td class="time"></td>
+          <td class="time"></td>
+          <td class="time"> - </td>
+          <td class="titleize">false</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/44"></a></td>
+
+        </tr>
+        <tr>
+          <td class="scheduled">Scheduled</td>
+
+          <td class="titleize">Arpanadding</td>
+          <td class="titleize">marketing</td>
+          <td class="time"></td>
+          <td class="time">2020-01-17</td>
+          <td class="time">2020-01-17 00:00:00 UTC - </td>
+          <td class="titleize">false</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/43"></a></td>
+
+        </tr>
+        <tr>
+          <td class="scheduled">Scheduled</td>
+
+          <td class="titleize">NLreminderEng43</td>
+          <td class="titleize">general_reminder</td>
+          <td class="time"></td>
+          <td class="time"></td>
+          <td class="time"> - </td>
+          <td class="titleize">false</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/42"></a></td>
+
+        </tr>
+        <tr>
+          <td class="created">Created</td>
+
+          <td class="titleize">IBSCamp</td>
+          <td class="titleize">transaction_message</td>
+          <td class="time"></td>
+          <td class="time"></td>
+          <td class="time"> - </td>
+          <td class="titleize">false</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/41"></a></td>
+
+        </tr>
+        <tr>
+          <td class="scheduled">Scheduled</td>
+
+          <td class="titleize">Test_IBS</td>
+          <td class="titleize">marketing</td>
+          <td class="time"></td>
+          <td class="time"></td>
+          <td class="time">2020-01-07 00:00:00 UTC - </td>
+          <td class="titleize">false</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/40"></a></td>
+
+        </tr>
+        <tr>
+          <td class="created">Created</td>
+
+          <td class="titleize">teset</td>
+          <td class="titleize">marketing</td>
+          <td class="time"></td>
+          <td class="time"></td>
+          <td class="time"> - </td>
+          <td class="titleize">false</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/39"></a></td>
+
+        </tr>
+        <tr>
+          <td class="created">Created</td>
+
+          <td class="titleize">Test</td>
+          <td class="titleize">marketing</td>
+          <td class="time"></td>
+          <td class="time"></td>
+          <td class="time"> - </td>
+          <td class="titleize">true</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/38"></a></td>
+
+        </tr>
+        <tr>
+          <td class="generating_list">Generating List</td>
+
+          <td class="titleize">First_live_campaign_for_loan_eligible</td>
+          <td class="titleize">marketing</td>
+          <td class="time">2019-12-02 17:57:12 UTC</td>
+          <td class="time"></td>
+          <td class="time">2019-12-02 01:00:00 UTC - 2019-12-02 23:16:00 UTC</td>
+          <td class="titleize">true</td>
+          <td class="time"></td>
+
+          <td class="number">3835</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            0<small>%</small>
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/37"></a></td>
+
+        </tr>
+        <tr>
+          <td class="generating_list">Generating List</td>
+
+          <td class="titleize">test_campaign122</td>
+          <td class="titleize">marketing</td>
+          <td class="time">2019-12-02 17:52:55 UTC</td>
+          <td class="time"></td>
+          <td class="time">2019-12-02 00:00:00 UTC - 2019-12-02 00:00:00 UTC</td>
+          <td class="titleize">true</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/36"></a></td>
+
+        </tr>
+        <tr>
+          <td class="created">Created</td>
+
+          <td class="titleize">dummy1</td>
+          <td class="titleize">marketing</td>
+          <td class="time"></td>
+          <td class="time"></td>
+          <td class="time"> - </td>
+          <td class="titleize">false</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/35"></a></td>
+
+        </tr>
+        <tr>
+          <td class="created">Created</td>
+
+          <td class="titleize">dummy_campaign</td>
+          <td class="titleize">marketing</td>
+          <td class="time"></td>
+          <td class="time"></td>
+          <td class="time"> - </td>
+          <td class="titleize">false</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/34"></a></td>
+
+        </tr>
+        <tr>
+          <td class="created">Created</td>
+
+          <td class="titleize">test</td>
+          <td class="titleize">marketing</td>
+          <td class="time"></td>
+          <td class="time"></td>
+          <td class="time"> - </td>
+          <td class="titleize">false</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/33"></a></td>
+
+        </tr>
+        <tr>
+          <td class="created">Created</td>
+
+          <td class="titleize">tst</td>
+          <td class="titleize">marketing</td>
+          <td class="time"></td>
+          <td class="time"></td>
+          <td class="time"> - </td>
+          <td class="titleize">false</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/32"></a></td>
+
+        </tr>
+        <tr>
+          <td class="created">Created</td>
+
+          <td class="titleize">telefonica_new</td>
+          <td class="titleize">marketing</td>
+          <td class="time"></td>
+          <td class="time"></td>
+          <td class="time"> - </td>
+          <td class="titleize">false</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/31"></a></td>
+
+        </tr>
+        <tr>
+          <td class="ready_to_send">Ready To Send</td>
+
+          <td class="titleize">telefonica</td>
+          <td class="titleize">marketing</td>
+          <td class="time">2019-11-07 13:36:04 UTC</td>
+          <td class="time"></td>
+          <td class="time"> - </td>
+          <td class="titleize">false</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/30"></a></td>
+
+        </tr>
+        <tr>
+          <td class="scheduled">Scheduled</td>
+
+          <td class="titleize">TEst2</td>
+          <td class="titleize">general_reminder</td>
+          <td class="time"></td>
+          <td class="time">2019-09-16</td>
+          <td class="time">2019-09-16 15:00:00 UTC - 2019-09-16 17:00:00 UTC</td>
+          <td class="titleize">true</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/29"></a></td>
+
+        </tr>
+        <tr>
+          <td class="ready_to_send">Ready To Send</td>
+
+          <td class="titleize">anu_test</td>
+          <td class="titleize">marketing</td>
+          <td class="time">2019-09-27 06:44:39 UTC</td>
+          <td class="time"></td>
+          <td class="time"> - </td>
+          <td class="titleize">false</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/28"></a></td>
+
+        </tr>
+        <tr>
+          <td class="scheduled">Scheduled</td>
+
+          <td class="titleize">CampaignFirst</td>
+          <td class="titleize">general_reminder</td>
+          <td class="time">2019-09-16 09:25:07 UTC</td>
+          <td class="time">2019-09-16</td>
+          <td class="time">2019-09-16 15:00:00 UTC - 2019-09-16 17:00:00 UTC</td>
+          <td class="titleize">true</td>
+          <td class="time"></td>
+
+          <td class="number">4</td>
+          <td class="number">2</td>
+          <td class="number">0</td>
+          <td>
+            0<small>%</small>
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/27"></a></td>
+
+        </tr>
+        <tr>
+          <td class="scheduled">Scheduled</td>
+
+          <td class="titleize">CampaignsDemo</td>
+          <td class="titleize">general_reminder</td>
+          <td class="time">2019-09-14 00:00:04 UTC</td>
+          <td class="time">2019-09-14</td>
+          <td class="time">2019-09-13 08:00:00 UTC - 2019-09-13 17:00:00 UTC</td>
+          <td class="titleize">true</td>
+          <td class="time"></td>
+
+          <td class="number">2</td>
+          <td class="number">2</td>
+          <td class="number">0</td>
+          <td>
+            0<small>%</small>
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/26"></a></td>
+
+        </tr>
+        <tr>
+          <td class="scheduled">Scheduled</td>
+
+          <td class="titleize">DemoPresentCampaigns</td>
+          <td class="titleize">general_reminder</td>
+          <td class="time">2019-09-13 12:19:07 UTC</td>
+          <td class="time">2019-09-13</td>
+          <td class="time">2019-09-13 08:00:00 UTC - 2019-09-13 18:00:00 UTC</td>
+          <td class="titleize">true</td>
+          <td class="time">2019-09-13 12:19:18 UTC</td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/25"></a></td>
+
+        </tr>
+        <tr>
+          <td class="scheduled">Scheduled</td>
+
+          <td class="titleize">demo_campaign</td>
+          <td class="titleize">general_reminder</td>
+          <td class="time">2019-09-13 10:15:03 UTC</td>
+          <td class="time">2019-09-13</td>
+          <td class="time">2019-09-13 08:00:00 UTC - 2019-09-13 17:00:00 UTC</td>
+          <td class="titleize">false</td>
+          <td class="time">2019-09-13 10:27:43 UTC</td>
+
+          <td class="number">26636</td>
+          <td class="number">26636</td>
+          <td class="number">12564</td>
+          <td>
+            0<small>%</small>
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/24"></a></td>
+
+        </tr>
+        <tr>
+          <td class="scheduled">Scheduled</td>
+
+          <td class="titleize">ABMtest</td>
+          <td class="titleize">general_reminder</td>
+          <td class="time"></td>
+          <td class="time"></td>
+          <td class="time">2019-09-12 13:00:00 UTC - 2019-09-12 17:00:00 UTC</td>
+          <td class="titleize">true</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/23"></a></td>
+
+        </tr>
+        <tr>
+          <td class="scheduled">Scheduled</td>
+
+          <td class="titleize">CloneAgain</td>
+          <td class="titleize">marketing</td>
+          <td class="time"></td>
+          <td class="time">2019-09-09</td>
+          <td class="time">2019-09-09 08:12:00 UTC - 2019-09-09 18:28:00 UTC</td>
+          <td class="titleize">true</td>
+          <td class="time"></td>
+
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td class="number">0</td>
+          <td>
+            &nbsp;
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/22"></a></td>
+
+        </tr>
+        <tr>
+          <td class="scheduled">Scheduled</td>
+
+          <td class="titleize">second_clone</td>
+          <td class="titleize">marketing</td>
+          <td class="time">2019-09-09 12:10:03 UTC</td>
+          <td class="time">2019-09-09</td>
+          <td class="time">2019-09-09 08:12:00 UTC - 2019-09-09 18:28:00 UTC</td>
+          <td class="titleize">true</td>
+          <td class="time">2019-09-09 12:10:04 UTC</td>
+
+          <td class="number">1</td>
+          <td class="number">1</td>
+          <td class="number">1</td>
+          <td>
+            0<small>%</small>
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/19"></a></td>
+
+        </tr>
+        <tr>
+          <td class="scheduled">Scheduled</td>
+
+          <td class="titleize">third_test</td>
+          <td class="titleize">marketing</td>
+          <td class="time">2019-09-09 11:45:05 UTC</td>
+          <td class="time">2019-09-09</td>
+          <td class="time">2019-09-09 17:12:00 UTC - 2019-09-09 18:28:00 UTC</td>
+          <td class="titleize">true</td>
+          <td class="time">2019-09-09 11:59:37 UTC</td>
+
+          <td class="number">1</td>
+          <td class="number">1</td>
+          <td class="number">0</td>
+          <td>
+            0<small>%</small>
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/18"></a></td>
+
+        </tr>
+        <tr>
+          <td class="scheduled">Scheduled</td>
+
+          <td class="titleize">schedule_demo</td>
+          <td class="titleize">marketing</td>
+          <td class="time">2019-09-09 10:50:04 UTC</td>
+          <td class="time">2019-09-09</td>
+          <td class="time">2019-09-09 14:28:00 UTC - 2019-09-09 18:28:00 UTC</td>
+          <td class="titleize">true</td>
+          <td class="time"></td>
+
+          <td class="number">1</td>
+          <td class="number">1</td>
+          <td class="number">0</td>
+          <td>
+            0<small>%</small>
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/17"></a></td>
+
+        </tr>
+        <tr>
+          <td class="scheduled">Scheduled</td>
+
+          <td class="titleize">test_campaign</td>
+          <td class="titleize">marketing</td>
+          <td class="time">2019-09-09 10:45:03 UTC</td>
+          <td class="time">2019-09-09</td>
+          <td class="time">2019-09-09 14:28:00 UTC - 2019-09-09 18:28:00 UTC</td>
+          <td class="titleize">true</td>
+          <td class="time"></td>
+
+          <td class="number">34</td>
+          <td class="number">34</td>
+          <td class="number">0</td>
+          <td>
+            0<small>%</small>
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/16"></a></td>
+
+        </tr>
+        <tr>
+          <td class="sent">Sent</td>
+
+          <td class="titleize">third_test</td>
+          <td class="titleize">marketing</td>
+          <td class="time">2019-07-19 12:04:44 UTC</td>
+          <td class="time"></td>
+          <td class="time"> - </td>
+          <td class="titleize">false</td>
+          <td class="time">2019-07-19 12:04:53 UTC</td>
+
+          <td class="number">20</td>
+          <td class="number">20</td>
+          <td class="number">20</td>
+          <td>
+            0<small>%</small>
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/14"></a></td>
+
+        </tr>
+        <tr>
+          <td class="dispatching">Dispatching</td>
+
+          <td class="titleize">second_clone</td>
+          <td class="titleize">marketing</td>
+          <td class="time">2019-07-19 11:51:31 UTC</td>
+          <td class="time"></td>
+          <td class="time"> - </td>
+          <td class="titleize">false</td>
+          <td class="time">2019-07-19 11:51:52 UTC</td>
+
+          <td class="number">20</td>
+          <td class="number">20</td>
+          <td class="number">0</td>
+          <td>
+            0<small>%</small>
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/13"></a></td>
+          <td><a class="btn btn-sm btn-danger" href="/text_message_campaigns/13/stop_campaign">Stop</a></td>
+        </tr>
+        <tr>
+          <td class="dispatching">Dispatching</td>
+
+          <td class="titleize">test_campaign</td>
+          <td class="titleize">marketing</td>
+          <td class="time">2019-07-19 10:43:07 UTC</td>
+          <td class="time"></td>
+          <td class="time"> - </td>
+          <td class="titleize">false</td>
+          <td class="time">2019-07-19 11:06:52 UTC</td>
+
+          <td class="number">26620</td>
+          <td class="number">26620</td>
+          <td class="number">5406</td>
+          <td>
+            0<small>%</small>
+          </td>
+
+          <td><small>INR</small> <span class="accounting">0</span></td>
+
+          <td class="show"><a class="fa fa-comments-o" href="/text_message_campaigns/12"></a></td>
+          <td><a class="btn btn-sm btn-danger" href="/text_message_campaigns/12/stop_campaign">Stop</a></td>
+        </tr>
+      </table>
+    </div>
+
+
+  </div>
+  <div class="block app-block-footer" style="background-color: #060A0D;">
+    <div class="container">
+      <div class="row m-t-2 p-t-3 p-b-2">
+        <div class="col-sm-4">
+          <ul class="list-unstyled list-spaced">
+            <li>
+              <h6 class="text-uppercase">You</h6>
+            </li>
+            <li><i class="text-muted fa fa-google"></i> <a style="color: inherit;" href="/self">venkat@yabx.co</a>
+            </li>
+            <li>Partner: <span href="/partners" class="partners">Yabx AF</span></li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="list-unstyled list-spaced">
+            <li>
+              <h6 class="text-uppercase">Page</h6>
+            </li>
+            <li>Generated: <span class="time">1581515324</span> <a style="color: inherit;" class="fa fa-cogs"
+                href="/log_entries/88fbd332-3f77-4311-9e49-6bfda1faad37/logging"></a></li>
+            <li>Your IP: 106.51.82.248</li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="list-unstyled list-spaced">
+            <li>
+              <h6 class="text-uppercase">Time</h6>
+            </li>
+            <li>Browser: <span class="time" data-time-format="d mmm yyyy h:MM TT">1581515324</span></li>
+            <!-------
+                <li><span class="titleize">Afghanistan:</span> 12 Feb 2020  6:18PM</li>
+              ----->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript">
+  window._prod = true;
+
+  window._session = { "sessionExpires": 1581515624000, "partner": "yabx_af", "country": "AF", "startTime": 1558793049000, "email": "venkat@yabx.co" };
+  ApplicationSupporter.init("TextMessageCampaigns");
+  FieldFormatter.format_fields();
+</script>
+
+<script src="https://use.fontawesome.com/414563918b.js"></script>
+
+</html>

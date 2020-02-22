@@ -1,0 +1,20 @@
+.card-header {
+  background-color: #001f56 !important;
+}
+
+
+.mat-icon {
+  height: 16px;
+  width: 19px;
+  font-size: 16px;
+}
+
+.btn-block-override {
+  display: block;
+  width: 60%;
+  height: 3em;
+}
+
+tr:nth-child(2n){
+  background: #fbfbfb !important;
+}

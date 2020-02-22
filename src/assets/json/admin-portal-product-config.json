@@ -1,0 +1,40 @@
+{
+  "page":1,
+  "pageTitle":"Live Loans",
+  "sections": [
+    {
+      "name":"Savings",
+      "products": [
+        {
+          "name":"Simple",
+          "category": "Simple Savings",
+          "int-calc":" 5",
+          "int-credited": "6"
+        },
+        {
+          "name":"Loans",
+          "category": "",
+          "int-calc":"",
+          "int-credited": ""
+        }
+      ]
+    },
+    {
+      "name":"Loans",
+      "products":[
+        {
+          "name":"Bullet",
+          "category": "Bullet Loans",
+          "int-calc":" 5",
+          "int-credited": "6"
+        },
+        {
+          "name":"Bullet",
+          "category": "Bullet Loans",
+          "int-calc":"",
+          "int-credited": ""
+        }
+      ]
+    }
+  ]
+}

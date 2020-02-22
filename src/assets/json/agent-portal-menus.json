@@ -1,0 +1,35 @@
+{
+    "menu_items": [
+        {
+            "title": "Reports",
+            "submenu_items": [],
+            "url": null,
+            "user_access": [
+                "admin",
+                "agent",
+                "consumer"
+            ]
+        },
+        {
+            "title": "Downloads",
+            "submenu_items": [],
+            "url": "http://downloads_list_url.com",
+            "user_access": [
+                "admin",
+                "agent",
+                "consumer"
+            ]
+        },
+        {
+            "title": "User Management",
+            "submenu_items": [],
+            "url": null,
+            "user_access": [
+                "admin",
+                "agent",
+                "consumer"
+            ]
+        }
+        
+    ]
+}

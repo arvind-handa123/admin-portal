@@ -1,0 +1,16 @@
+<div class="panel my-5">
+  <div class="panel-footer text-center">
+    <div class="custom-file w-50 my-4 bordr border-dark rounded">
+      <a *ngIf="rLink" type="button" mat-raised-button color="primary" class="btn-lg mx-3 my-2 bg-success"
+        [routerLink]="rLink">
+        <mat-icon>{{iconName}}</mat-icon>
+        {{iconLabel}}
+      </a>
+      <button *ngIf="!rLink" type="button" [disabled]="!allDocsRecieved" mat-raised-button color="primary" class="btn-lg mx-3 my-2 bg-success"
+        (click)="buttonClick('generate')">
+        <mat-icon>{{iconName}}</mat-icon>
+        {{iconLabel}}
+      </button>
+    </div>
+  </div>
+</div>

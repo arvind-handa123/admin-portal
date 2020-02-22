@@ -1,0 +1,213 @@
+{
+    "pageId": 1,
+    "pageTitle": "Reports",
+    "sections": [
+        {
+            "sectionName": "Aggreation Reports",
+            "fields": [
+                {
+                    "type": "LINK",
+                    "fieldName": "Loan Performance By Tranche",
+                    "data_url": "https://link_to_data.com",
+                    "src": null,
+                    "user_access": [
+                        "admin",
+                        "agent",
+                        "consumer"
+                    ]
+                },
+                {
+                    "type": "iframe",
+                    "fieldName": "Daily Disbursement And Recovery",
+                    "src": "https://link-to-url.com/path/to/iframe",
+                    "data_url": null,
+                    "user_access": [
+                        "admin",
+                        "agent",
+                        "consumer"
+                    ]
+                },
+                {
+                    "type": "LINK",
+                    "fieldName": "Daily New Loan Summary",
+                    "src": "https://link-to-url.com/path/to/iframe",
+                    "data_url": null,
+                    "user_access": [
+                        "admin",
+                        "agent",
+                        "consumer"
+                    ]
+                },
+                {
+                    "type": "iframe",
+                    "fieldName": "Trading Report",
+                    "src": "https://link-to-url.com/path/to/iframe",
+                    "data_url": null,
+                    "user_access": [
+                        "admin",
+                        "agent",
+                        "consumer"
+                    ]
+                },
+                {
+                    "type": "LINK",
+                    "fieldName": "Age Analysis",
+                    "src": null,
+                    "data_url": "https://link-to-url.com/path/to/data",
+                    "user_access": [
+                        "admin",
+                        "agent",
+                        "consumer"
+                    ]
+                },
+                {
+                    "type": "LINK",
+                    "fieldName": "Monthly Loan Summary",
+                    "src": "https://link-to-url.com/path/to/iframe",
+                    "data_url": null,
+                    "user_access": [
+                        "admin",
+                        "agent",
+                        "consumer"
+                    ]
+                },
+                {
+                    "type": "iframe",
+                    "fieldName": "Weekly Loan Summary",
+                    "src": "https://link-to-url.com/path/to/iframe",
+                    "data_url": null,
+                    "user_access": [
+                        "admin",
+                        "agent",
+                        "consumer"
+                    ]
+                },
+                {
+                    "type": "LINK",
+                    "fieldName": "Loan Disbursement And Recovery",
+                    "src": null,
+                    "data_url": "https://link-to-url.com/path/to/data",
+                    "user_access": [
+                        "admin",
+                        "agent",
+                        "consumer"
+                    ]
+                },
+                {
+                    "type": "LINK",
+                    "fieldName": "Amount - Wise Loan And Recovery Summary",
+                    "src": null,
+                    "data_url": "https://link-to-url.com/path/to/data",
+                    "user_access": [
+                        "admin",
+                        "agent",
+                        "consumer"
+                    ]
+                },
+                {
+                    "type": "LINK",
+                    "fieldName": "Daily Revenue Report",
+                    "src": null,
+                    "data_url": "https://link-to-url.com/path/to/data",
+                    "user_access": [
+                        "admin",
+                        "agent",
+                        "consumer"
+                    ]
+                },
+                {
+                    "type": "iframe",
+                    "fieldName": "Daily Loans Report",
+                    "src": "https://link-to-url.com/path/to/iframe",
+                    "data_url": null,
+                    "user_access": [
+                        "admin",
+                        "agent",
+                        "consumer"
+                    ]
+                },
+                {
+                    "type": "LINK",
+                    "fieldName": "Monthly Loans Report",
+                    "src": null,
+                    "data_url": "https://link-to-url.com/path/to/data",
+                    "user_access": [
+                        "admin",
+                        "agent",
+                        "consumer"
+                    ]
+                },
+                {
+                    "type": "LINK",
+                    "fieldName": "Daily Savings Report",
+                    "src": null,
+                    "data_url": "https://link-to-url.com/path/to/data",
+                    "user_access": [
+                        "admin",
+                        "agent",
+                        "consumer"
+                    ]
+                }
+            ]
+        },
+        {
+            "sectionName": "Transaction Report",
+            "fields": [
+                {
+                    "type": "LINK",
+                    "fieldName": "Customers"
+                },
+                {
+                    "type": "LINK",
+                    "fieldName": "Receipts"
+                },
+                {
+                    "type": "LINK",
+                    "fieldName": "USSD Sessions"
+                },
+                {
+                    "type": "LINK",
+                    "fieldName": "Disbursements"
+                },
+                {
+                    "type": "LINK",
+                    "fieldName": "Text Messages"
+                },
+                {
+                    "type": "LINK",
+                    "fieldName": "Loan Aging"
+                },
+                {
+                    "type": "LINK",
+                    "fieldName": "Overdue Loans"
+                },
+                {
+                    "type": "LINK",
+                    "fieldName": "Itemised Recovery"
+                },
+                {
+                    "type": "LINK",
+                    "fieldName": "Savings Account Report"
+                },
+                {
+                    "type": "LINK",
+                    "fieldName": "Savings Deposits"
+                },
+                {
+                    "type": "LINK",
+                    "fieldName": "Savings Withdrawls"
+                }
+
+            ]
+        },
+        {
+            "sectionName": "Generate Email Reports",
+            "fields": [
+                {
+                    "type": "LINK",
+                    "fieldName": "Generate Report"
+                }
+            ]
+        }
+    ]
+}

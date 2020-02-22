@@ -1,0 +1,872 @@
+{
+    "pages": [
+        {
+            "pageId": 1,
+            "pageTitle": "Personal Information",
+            "sections": [
+                {
+                    "sectionName": "",
+                    "fields": [
+                        {
+                            "type": "text",
+                            "fieldName": "First Name",
+                            "data": "Krishna"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Middle Name",
+                            "data": "banna"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Last Name",
+                            "data": "nana"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Primary Mobile Number",
+                            "data": 7989119669
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Alternate Mobile Number",
+                            "data": 7989119669
+                        },
+                        {
+                            "type": "email",
+                            "fieldName": "E-mail",
+                            "data": "pradeepprasanth@gmail.com"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Father's Name",
+                            "data": "fgdd"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Mother's Name",
+                            "data": "nagfdgna"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Marital Status",
+                            "data": ""
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Spouse Name",
+                            "data": "nana"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Dependents",
+                            "data": 43
+                        },
+                        {
+                            "type": "date",
+                            "fieldName": "Date of Birth",
+                            "data": "24/07/1997"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Birth Registration Number",
+                            "data": 3435678453423
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Driving License Number",
+                            "data": "gtrdhf546786908"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Place of Birth",
+                            "data": "gregregre"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Gender",
+                            "data": "Male"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "TIN",
+                            "data": 1234556778900
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Residential Status",
+                            "data": "Resident"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Passport Number",
+                            "data": 1234556778900
+                        },
+                        {
+                            "type": "date",
+                            "fieldName": "Passport Expiry Date",
+                            "data_url": "30/10/19"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Nationality",
+                            "data": "Indian"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "National ID Number",
+                            "data": 1234556778900
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "Bank Account Information",
+                    "fields": [
+                        {
+                            "type": "text",
+                            "fieldName": "Account Title",
+                            "data": "fgdd"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Type of Concern",
+                            "data": "Proprietorship"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Bank Name",
+                            "data": "affa"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Account Number",
+                            "data": 1234556778900
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Branch",
+                            "data": "sgsdf"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Currency",
+                            "data": "1234556778900"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Account Type",
+                            "data": "Current"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Mode of Operation",
+                            "data": "Sindle"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Purpose of Account",
+                            "data": "efwe"
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "Work and Education Details",
+                    "fields": [
+                        {
+                            "type": "text",
+                            "fieldName": "Occupation",
+                            "data": "dfg"
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "Permanent Address",
+                    "fields": [
+                        {
+                            "type": "text",
+                            "fieldName": "Address",
+                            "data": "fdgr"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Upzilla/Thana",
+                            "data": "efewe"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "City/District",
+                            "data": "efwfse"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Division",
+                            "data": "efwse"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Postal Code",
+                            "data": 35443
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Nearest Landmark",
+                            "data": "efwfsffe"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Country",
+                            "data": "efwfsde"
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "Present Address",
+                    "fields": [
+                        {
+                            "type": "text",
+                            "fieldName": "Address",
+                            "data": "fdgr"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Upzilla/Thana",
+                            "data": "efewe"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "City/District",
+                            "data": "efwfse"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Division",
+                            "data": "efwse"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Postal Code",
+                            "data": 35443
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Nearest Landmark",
+                            "data": "efwfsffe"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Country",
+                            "data": "efwfsde"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "pageId": 2,
+            "pageTitle": "Nominee Personal Information",
+            "sections": [
+                {
+                    "sectionName": "",
+                    "fields": [
+                        {
+                            "type": "text",
+                            "fieldName": "First Name",
+                            "data": "Krishna"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Middle Name",
+                            "data": "banna"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Last Name",
+                            "data": "nana"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Primary Mobile Number",
+                            "data": 7989119669
+                        },
+                        {
+                            "type": "email",
+                            "fieldName": "E-mail",
+                            "data": "pradeepprasanth@gmail.com"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Father's Name",
+                            "data": "fgdd"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Mother's Name",
+                            "data": "nagfdgna"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Marital Status",
+                            "data": ""
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Spouse Name",
+                            "data": "nana"
+                        },
+                        {
+                            "type": "date",
+                            "fieldName": "Date of Birth",
+                            "data": "24/07/1997"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Birth Registration Number",
+                            "data": 3435678453423
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Driving License Number",
+                            "data": "gtrdhf546786908"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Gender",
+                            "data": "Male"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "TIN",
+                            "data": 1234556778900
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Residential Status",
+                            "data": "Resident"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Passport Number",
+                            "data": 1234556778900
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Nationality",
+                            "data": "Indian"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "National ID Number",
+                            "data": 1234556778900
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "Permanent Address",
+                    "fields": [
+                        {
+                            "type": "text",
+                            "fieldName": "Address",
+                            "data": "fdgr"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Upzilla/Thana",
+                            "data": "efewe"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "City/District",
+                            "data": "efwfse"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Division",
+                            "data": "efwse"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Postal Code",
+                            "data": 35443
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Nearest Landmark",
+                            "data": "efwfsffe"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Country",
+                            "data": "efwfsde"
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "Present Address",
+                    "fields": [
+                        {
+                            "type": "text",
+                            "fieldName": "Address",
+                            "data": "fdgr"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Upzilla/Thana",
+                            "data": "efewe"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "City/District",
+                            "data": "efwfse"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Division",
+                            "data": "efwse"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Postal Code",
+                            "data": 35443
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Nearest Landmark",
+                            "data": "efwfsffe"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Country",
+                            "data": "efwfsde"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "pageId": 2,
+            "pageTitle": "Introducer Details",
+            "sections": [
+                {
+                    "sectionName": "",
+                    "fields": [
+                        {
+                            "type": "text",
+                            "fieldName": "Introducer Name",
+                            "data": "Krishna"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Account Number",
+                            "data": 42332
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Relationship",
+                            "data": "nana"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "pageId": 3,
+            "pageTitle": "Business Details",
+            "sections": [
+                {
+                    "sectionName": "Bank Account Information",
+                    "fields": [
+                        {
+                            "type": "text",
+                            "fieldName": "Account Title",
+                            "data": "fgdd"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Type of Concern",
+                            "data": "Proprietorship"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Bank Name",
+                            "data": "affa"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Account Number",
+                            "data": 1234556778900
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Branch",
+                            "data": "sgsdf"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Currency",
+                            "data": "1234556778900"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Account Type",
+                            "data": "Current"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Mode of Operation",
+                            "data": "Sindle"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Purpose of Account",
+                            "data": "efwe"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Business Name",
+                            "data": "sdf"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Name of the Proprietor",
+                            "data": "fdb"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Facility Details",
+                            "data": "sfdds"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Facility Type",
+                            "data": "sfdds"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Type of Business(Ownership)",
+                            "data": "sfdds"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Business Sector",
+                            "data": "sfdds"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Detail of Business",
+                            "data": "sfdds"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Initial Capital (BDT)",
+                            "data": 534.63
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Source of Funds",
+                            "data": "sfdds"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "VAT Registeration Number",
+                            "data": "sfdds"
+                        },
+                        {
+                            "type": "date",
+                            "fieldName": "BUSINESS START DATE",
+                            "data": "21/3/19"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "BUSINESS TIN",
+                            "data": 3546
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Annual Sales (BDT)",
+                            "data": 235.435
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Annual Gross Profit",
+                            "data": 325.433
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Annual Expenses",
+                            "data": 325.433
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Value of Fixed Assets (Expect Land & Building) (BDT)",
+                            "data": 35.433
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Employees",
+                            "data": 32
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "Trade License",
+                    "fields": [
+                        {
+                            "type": "number",
+                            "fieldName": "Trade License Number",
+                            "data": 23
+                        },
+                        {
+                            "type": "date",
+                            "fieldName": "Trade License Expiry Date",
+                            "data": "12/12/19"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Trade License Issuing Authority",
+                            "data": "yth"
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "Other License",
+                    "fields": [
+                        {
+                            "type": "number",
+                            "fieldName": "Trade License Number",
+                            "data": 23
+                        },
+                        {
+                            "type": "date",
+                            "fieldName": "Trade License Expiry Date",
+                            "data": "12/12/19"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Trade License Issuing Authority",
+                            "data": "yth"
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "Registered Address",
+                    "fields": [
+                        {
+                            "type": "text",
+                            "fieldName": "Address",
+                            "data": "fdgr"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Upzilla/Thana",
+                            "data": "efewe"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "City/District",
+                            "data": "efwfse"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Division",
+                            "data": "efwse"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Postal Code",
+                            "data": 35443
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Nearest Landmark",
+                            "data": "efwfsffe"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Country",
+                            "data": "efwfsde"
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "Office Address",
+                    "fields": [
+                        {
+                            "type": "text",
+                            "fieldName": "Address",
+                            "data": "fdgr"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Upzilla/Thana",
+                            "data": "efewe"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "City/District",
+                            "data": "efwfse"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Division",
+                            "data": "efwse"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Postal Code",
+                            "data": 35443
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Nearest Landmark",
+                            "data": "efwfsffe"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Country",
+                            "data": "efwfsde"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "pageId": 4,
+            "pageTitle": "Monthly Transaction Details",
+            "sections": [
+                {
+                    "sectionName": "",
+                    "fields": [
+                        {
+                            "type": "number",
+                            "fieldName": "Monthly Turnover (BDT)",
+                            "data": 5433.435
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Monthly Deposits (BDT)",
+                            "data": 5433.54
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Monthly Withdrawls (BDT)",
+                            "data": 34.345
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Initial Deposit (BDT)",
+                            "data": 324.23
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "pageId": 5,
+            "pageTitle": "Liabilities Details",
+            "sections": [
+                {
+                    "sectionName": "Personal Liabilities",
+                    "fields": [
+                        {
+                            "type": "number",
+                            "fieldName": "Loan Amount (BDT)",
+                            "data": 5433.435
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Bank/NBFI",
+                            "data": "grg"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Liability From Other Organisation",
+                            "data": "fgd"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Loan Amount From Other Organisation (BDT)",
+                            "data": 3244.23
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "Business Liabilities",
+                    "fields": [
+                        {
+                            "type": "number",
+                            "fieldName": "Loan Amount (BDT)",
+                            "data": 5433.435
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Bank/NBFI",
+                            "data": "grg"
+                        },
+                        {
+                            "type": "text",
+                            "fieldName": "Liability From Other Organisation",
+                            "data": "fgd"
+                        },
+                        {
+                            "type": "number",
+                            "fieldName": "Loan Amount From Other Organisation (BDT)",
+                            "data": 3244.23
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "pageId": 5,
+            "pageTitle": "Required Documents",
+            "sections": [
+                {
+                    "sectionName": "",
+                    "fields": [
+                        {
+                            "type": "file",
+                            "fieldName": "Identity Proof Front",
+                            "data_url": "https://link-to-url.com/path/to/data"
+                        },
+                        {
+                            "type": "file",
+                            "fieldName": "Identity Proof Back",
+                            "data_url": "https://link-to-url.com/path/to/data"
+                        },
+                        {
+                            "type": "file",
+                            "fieldName": "Address Proof Front",
+                            "data_url": "https://link-to-url.com/path/to/data"
+                        },
+                        {
+                            "type": "file",
+                            "fieldName": "Address Proof Back",
+                            "data_url": "https://link-to-url.com/path/to/data"
+                        },
+                        {
+                            "type": "file",
+                            "fieldName": "TIN Certificates",
+                            "data_url": "https://link-to-url.com/path/to/data"
+                        },
+                        {
+                            "type": "file",
+                            "fieldName": "Nominee Photo",
+                            "data_url": "https://link-to-url.com/path/to/data"
+                        },
+                        {
+                            "type": "file",
+                            "fieldName": "Signature",
+                            "data_url": "https://link-to-url.com/path/to/data"
+                        },
+                        {
+                            "type": "file",
+                            "fieldName": "Trade License",
+                            "data_url": "https://link-to-url.com/path/to/data"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+

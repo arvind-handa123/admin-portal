@@ -1,0 +1,48 @@
+{
+  "page_id": 1,
+  "page_title": "Ekyc-Dashboard",
+  "sections":[
+    {
+      "section_id": 1,
+      "section_name": "Submitted",
+      "data_url":"",
+      "data_fields": [
+        "name",
+        "user_id",
+        "submitted_date"
+      ]
+    },
+    {
+      "section_id": 2,
+      "section_name": "Under Review",
+      "data_url":"",
+      "data_fields": [
+        "name",
+        "user_id",
+        "submitted_date"
+      ]
+    },
+    {
+      "section_id": 3,
+      "section_name": "Approved",
+      "data_url":"",
+      "data_fields": [
+        "name",
+        "user_id",
+        "submitted_date",
+        "approved_date"
+      ]
+    },
+    {
+      "section_id": 4,
+      "section_name": "Rejected",
+      "data_url":"",
+      "data_fields": [
+        "name",
+        "user_id",
+        "submitted_date",
+        "rejected_date"
+      ]
+    }
+  ]
+}

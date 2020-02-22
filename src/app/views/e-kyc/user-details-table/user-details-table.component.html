@@ -1,0 +1,262 @@
+<div *ngFor="let alert of alertsDismiss">
+  <alert [type]="alert.type" [dismissOnTimeout]="alert.timeout" class="alert-dismiss">{{ alert.msg }}</alert>
+</div>
+
+<div class="row mx-0">
+  <div class="btn-toolbar my-3 col-11 mx-0 pl-0" role="toolbar" aria-label="Toolbar with button groups">
+    <div *ngIf="category === 'Submitted' || category === 'Re-Submitted'" class="btn-group mr-2" role="group"
+      aria-label="First group">
+      <button mat-raised-button color="primary" (click)="initiateReview()">Initiate Review</button>
+    </div>
+    <!-- <div *ngIf="category === 'Submitted' || category === 'Re-Submitted' || category === 'Under Review'"
+      class="btn-group mr-2" role="group" aria-label="Second group">
+      <button mat-raised-button color="primary" (click)="approveKyc()">Approve</button>
+    </div>
+    <div *ngIf="category === 'Submitted' || category === 'Re-Submitted' || category === 'Rejected'"
+      class="btn-group mr-2" role="group" aria-label="Fourth group">
+      <button mat-raised-button color="primary" (click)="reSendKyc()">Re-Send</button>
+    </div>
+    <div *ngIf="category === 'Submitted' || category === 'Re-Submitted' || category === 'Under Review'"
+      class="btn-group mr-2" role="group" aria-label="Third group">
+      <button mat-raised-button color="warn" (click)="rejectKyc()">Reject</button>
+    </div>
+    <div *ngIf="category === 'Approved'" class="btn-group mr-2" role="group" aria-label="Third group">
+      <button mat-raised-button color="primary" (click)="navigateToDocsPage()">Review Disclaimer Documents</button>
+    </div> -->
+  </div>
+
+  <i title="Click here for Page Instructions" class="fa fa-question-circle float-right col-1 info-icon" id="infoIcon"
+    data-toggle="modal" data-target="#InfoModal" style="font-size: 2rem;color: orangered; cursor:pointer"
+    aria-hidden="true"></i>
+</div>
+
+<mat-tab-group #tabs [backgroundColor]="'primary'">
+  <mat-tab *ngFor="let pageDTO of formData; let i = index" [id]="'page' + i" [label]="pageDTO.pageTitle">
+    <accordion [isAnimated]="true" [closeOthers]="true" class="mt-3">
+      <!-- <marquee
+        *ngIf="category === 'Submitted' || category === 'Re-Submitted' || category === 'Under Review' || isEditable === true"
+        style="font-size: 11px;" class="text-danger">Please press enter after typing remark/values to confirm each
+        field.</marquee> -->
+      <div *ngFor="let section of pageDTO.sections; let j = index">
+        <accordion-group class="panel" [heading]="section.sectionTitle" [isOpen]="j == 0 ? true : false">
+          <div class="panel-body">
+            <section *ngFor="let group of section.groups">
+              <h4 class="text-capitalize" style="font-size: 17px;">
+                {{ group.groupTitle ? group.groupTitle : group.groupName | camelCaseToSpace | titlecase }}
+              </h4>
+              <hr />
+              <form class="form-horizontal border rounded bg-light p-5 mb-4">
+                <div *ngFor="let field of group.fields; let l = index" class="form-group row">
+                  <label class="col-md-2 col-form-label">{{field.fieldName}}</label>
+                  <div class="col-md-6 form-group">
+
+                    <input *ngIf="field.type.toLowerCase() === 'text'" type="text" name="fieldValue"
+                      class="form-control"
+                      [value]="field.savedData ? field.savedData : field.functionality && field.functionality.type.toLowerCase() === 'replicate' ? getGroup(field.functionality.fromGroup, section.groups)[field].savedData : ''"
+                      [disabled]="!isEditable" [required]="field.mandatory" [placeholder]="field.placeHolderText"
+                      [pattern]="field.validation" (keypress)="functionThatPreventsDefault($event)"
+                      (keyup)="onRemarkorValueInput(section.sectionId,group.groupId, pageDTO.pageId, field.fieldId, $event)" />
+
+                    <input *ngIf="field.type.toLowerCase() === 'calender'" [type]="isEditable ? 'date' : 'text'"
+                      name="fieldValue" class="form-control"
+                      [value]="field.savedData ? getFormattedDate(field.savedData) : ''" [disabled]="!isEditable"
+                      [required]="field.mandatory" [placeholder]="field.placeHolderText"
+                      (change)="onRemarkorValueInput(section.sectionId,group.groupId, pageDTO.pageId, field.fieldId, $event)" />
+
+
+                    <span *ngIf="field.type.toLowerCase() === 'attachment'" class="form-check">
+                      <button *ngIf="docImage[field.fieldId] === undefined" class="btn btn-primary btn-sm"
+                        (click)="getFile(field.savedData, field.fieldId)">View</button>
+                      <img class="docImage" *ngIf="docImage[field.fieldId]" [src]="docImage[field.fieldId]"
+                        data-toggle="modal" data-target="#attachmentModalCenter"
+                        (click)="setCurrentImage(docImage[field.fieldId])"
+                        [alt]="field.savedData ? field.savedData : 'N/A'" height="100" width="200">
+                        <small *ngIf="docImage[field.fieldId]" class="text-danger"> *Click on the image to enlarge it.</small>
+                    </span>
+
+                    <span *ngIf="field.type.toLowerCase() === 'radio'" class="form-check">
+                      <span *ngFor="let option of field.options" class=" mx-4">
+                        <input class="form-check-input" type="radio" [name]="field.fieldId" [value]="option"
+                          [checked]="field.savedData === option ? true : false"
+                          (click)="onRemarkorValueInput(section.sectionId,group.groupId, pageDTO.pageId, field.fieldId, $event)"
+                          [disabled]="!isEditable" />{{option}}
+                      </span>
+                    </span>
+
+                    <span *ngIf="field.type.toLowerCase() === 'checkbox' || field.type.toLowerCase() === 'plus'"
+                      class="form-check">
+                      <span class=" mx-4">
+                        <input class="form-check-input" type="checkbox" [name]="field.fieldId" [value]=""
+                          [checked]="field.functionality.type === 'Replicate' || field.functionality.type === 'Copy' ? true : false"
+                          [disabled]="!isEditable"
+                          (click)="onRemarkorValueInput(section.sectionId,group.groupId, pageDTO.pageId, field.fieldId, $event)" />
+                        <!-- <label>{{getGroupName(field.functionality.fromGroup, section.groups)}}</label> -->
+                      </span>
+                    </span>
+
+                    <!-- (click)="onRemarkorValueInput(section.sectionId,group.groupId, pageDTO.pageId, field.fieldId, $event)" -->
+
+                    <select *ngIf="field.type.toLowerCase() === 'dropdowns'" name="fieldValue" class="form-control"
+                      (change)="onRemarkorValueInput(section.sectionId,group.groupId, pageDTO.pageId, field.fieldId, $event)"
+                      [disabled]="!isEditable" [value]="field.savedData ? field.savedData : ''">
+                      <option *ngIf="!field.savedData" value="">Select One</option>
+                      <option *ngIf="field.savedData" [value]="field.savedData">{{field.savedData}}</option>
+                      <option *ngFor="let option of field.options" [value]="option">{{ option }}</option>
+                    </select>
+
+
+                    <span class="row">
+                      <span *ngFor="let subField of field.subFields" class="mx-3 my-2">
+                        <span class="" *ngIf="subField.fields.type.toLowerCase() === 'attachment'" class="form-check">
+                          <button *ngIf="docImage[subField.fields.fieldId + field.fieldId] === undefined"
+                            class="btn btn-primary btn-sm"
+                            (click)="getFile(subField.fields.savedData, subField.fields.fieldId + field.fieldId)">{{subField.fields.fieldName}}</button>
+
+                          <img class="docImage" *ngIf="docImage[subField.fields.fieldId + field.fieldId]"
+                            [src]="docImage[subField.fields.fieldId + field.fieldId]"
+                            [alt]="subField.fields.savedData ? subField.fields.savedData + field.fieldId : 'N/A'"
+                            data-toggle="modal" data-target="#attachmentModalCenter"
+                            (click)="setCurrentImage(docImage[subField.fields.fieldId + field.fieldId])" height="100"
+                            width="200">
+                            <small *ngIf="docImage[subField.fields.fieldId + field.fieldId]" class="text-danger"> *Click on the image to enlarge it.</small>
+                          <input title="Press Enter to Confirm" type="text" name="remark"
+                            [id]="'remark' + field.fieldId + subField.fields.fieldId" class="form-control my-1"
+                            [value]="subField.fields.remark ? subField.fields.remark : ''" placeholder="Remarks"
+                            [disabled]="!isReviewEnabled" (keypress)="functionThatPreventsDefault($event)"
+                            (keyup)="onRemarkorValueInput(section.sectionId,group.groupId, pageDTO.pageId, field.fieldId, $event,subField.fields.fieldName)" />
+                        </span>
+                      </span>
+                    </span>
+
+                  </div>
+                  <div class="col-md-4 form-group">
+                    <input
+                      *ngIf="field.type.toLowerCase() !== 'checkbox' && field.type.toLowerCase() !== 'plus' && !field.subFields"
+                      title="Press Enter to Confirm" type="text" name="remark" class="form-control"
+                      [value]="field.remark ? field.remark : ''" placeholder="Remarks" [disabled]="!isReviewEnabled"
+                      (keypress)="functionThatPreventsDefault($event)"
+                      (keyup)="onRemarkorValueInput(section.sectionId,group.groupId, pageDTO.pageId, field.fieldId, $event)" />
+                  </div>
+                </div>
+              </form>
+
+
+              <div
+                *ngIf="category === 'Submitted' || category === 'Re-Submitted' || category === 'Under Review'|| isEditable === true"
+                class="row w-100 text-right mx-0">
+                <button title="Enter at least one comment to enable Submit." type="submit"
+                  class="btn btn-primary mb-4 ml-auto px-5"
+                  *ngIf="category === 'Submitted' || category === 'Re-Submitted' || category === 'Under Review' || isEditable === true"
+                  [disabled]="remarksArray && remarksArray.length === 0" (click)="postRemarks($event)">
+                  <i class="fa fa-dot-circle-o"></i> Submit
+                </button>
+              </div>
+            </section>
+          </div>
+        </accordion-group>
+      </div>
+    </accordion>
+  </mat-tab>
+</mat-tab-group>
+
+<div class="panel"
+  *ngIf="category === 'Submitted' || category === 'Re-Submitted' || category === 'Under Review'|| isEditable === true">
+  <div class="panel-footer text-right">
+    <button title="Enter at least one comment to enable Submit." type="submit" class="btn btn-primary px-5"
+      [disabled]="remarksArray && remarksArray.length === 0" (click)="postRemarks($event)">
+      <i class="fa fa-dot-circle-o"></i> Submit All
+    </button>
+  </div>
+</div>
+
+<div class="btn-toolbar my-3 col-11 mx-0 pl-0" role="toolbar" aria-label="Toolbar with button groups">
+  <!-- <div *ngIf="category === 'Submitted' || category === 'Re-Submitted'" class="btn-group mr-2" role="group"
+    aria-label="First group">
+    <button mat-raised-button color="primary" (click)="initiateReview()">Initiate Review</button>
+  </div> -->
+  <div *ngIf="category === 'Submitted' || category === 'Re-Submitted' || category === 'Under Review'"
+    class="btn-group mr-2" role="group" aria-label="Second group">
+    <button mat-raised-button color="primary" (click)="approveKyc()">Approve</button>
+  </div>
+  <div *ngIf="category === 'Submitted' || category === 'Re-Submitted' || category === 'Rejected'" class="btn-group mr-2"
+    role="group" aria-label="Fourth group">
+    <button mat-raised-button color="primary" (click)="reSendKyc()">Re-Send</button>
+  </div>
+  <div *ngIf="category === 'Submitted' || category === 'Re-Submitted' || category === 'Under Review'"
+    class="btn-group mr-2" role="group" aria-label="Third group">
+    <button mat-raised-button color="warn" (click)="rejectKyc()">Reject</button>
+  </div>
+  <div *ngIf="category === 'Approved'" class="btn-group mr-2" role="group" aria-label="Third group">
+    <button mat-raised-button color="primary" (click)="navigateToDocsPage()">Review Disclaimer Documents</button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="InfoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h4 class="modal-title" id="exampleModalCenterTitle">Instructions :</h4>
+        <br />
+        <ul *ngIf="category === 'Submitted' || category === 'Re-Submitted'" class="list-group list-group-flush">
+          <li class="list-group-item">i. Please click on the <b>Initiate Review</b> button to start the profile review
+            and
+            edit existing information/ enter a remark.</li>
+          <li class="list-group-item">ii. You can navigate between the sections by clicking on respective tabs i.e.
+            Retailer information, Business Details, Liabilities Information & Documents.
+          </li>
+          <li class="list-group-item">iii. After typing a remark; <b>please press Enter button.</b></li>
+          <li class="list-group-item">iv. To submit the remarks, please click <b>Submit</b>. You can also submit all the
+            ‘remarks’ by clicking <b>Submit
+              all</b> button.</li>
+          <li class="list-group-item">v. If entered information appears to be correct/ in-correct, profile can be
+            directly approved/ rejected/
+            re-send as well without initiating the review.</li>
+        </ul>
+
+        <ul *ngIf="category === 'Approved'" class="list-group list-group-flush">
+          <li class="list-group-item">i. Please click on the <b>Review Disclaimer Documents</b> button to view/upload
+            documents.</li>
+        </ul>
+
+        <ul *ngIf="category === 'Under Review'" class="list-group list-group-flush">
+          <li class="list-group-item">i. If entered information appears to be correct/ in-correct, profile can be
+            directly approved/ rejected.</li>
+          <li class="list-group-item">ii. You can navigate between the sections by clicking on respective tabs i.e.
+            Retailer information, Business Details, Liabilities Information & Documents.
+          </li>
+          <li class="list-group-item">iii. After typing a remark; <b>please press Enter button.</b></li>
+          <li class="list-group-item">iv. To submit the remarks, please click <b>Submit</b>. You can also submit all the
+            ‘remarks’ by clicking <b>Submit
+              all</b> button.</li>
+        </ul>
+      </div>
+      <br />
+      <!-- <div class="modal-footer"> -->
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
+
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button> -->
+
+<!-- Attachment Modal -->
+<div class="modal fade" id="attachmentModalCenter" tabindex="-1" role="dialog"
+  aria-labelledby="attachmentModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="width: fit-content !important;">
+      <div class="modal-body">
+        <img class="docImage" [src]="currentImage" alt='N/A' width="500" height="500">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,127 @@
+import { PortalSelectComponent } from './containers/portal-select/portal-select.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+// tslint:disable
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+// Import Containers
+import { DefaultLayoutComponent } from './containers';
+import { P404Component } from './views/error/404.component';
+import { P500Component } from './views/error/500.component';
+import { LoginComponent } from './views/login/login.component';
+import { RegisterComponent } from './views/register/register.component';
+import { AuthGuard } from './auth/auth.guard';
+import { ChangePasswordComponent } from './views/change-password/change-password.component';
+
+export const routes: Routes = [
+  {
+    path: '404',
+    component: P404Component,
+    data: {
+      title: 'Page 404'
+    }
+  },
+  {
+    path: '500',
+    component: P500Component,
+    data: {
+      title: 'Page 500'
+    }
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+    data: {
+      title: 'Login Page'
+    }
+  },
+  {
+    path: 'change-password',
+    component: ChangePasswordComponent,
+    data: {
+      title: 'Change Password'
+    }
+  },
+  {
+    path: 'select-portal',
+    component: PortalSelectComponent,
+    canActivate: [AuthGuard],
+    data: {
+      title: 'Select Portal'
+    }
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
+    data: {
+      title: 'Register Page'
+    }
+  },
+  {
+    path: '',
+    component: DefaultLayoutComponent,
+    canActivate: [AuthGuard],
+    children: [
+      {
+        path: 'base',
+        loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
+      },
+      {
+        path: 'airtel',
+        redirectTo: 'reports',
+        pathMatch: 'full'
+      },
+      {
+        path: 'yabx',
+        redirectTo: 'reports',
+        pathMatch: 'full'
+      },
+      {
+        path: 'reports',
+        loadChildren: () => import('./views/reports/reports.module').then(m => m.ReportsModule)
+      },
+      {
+        path: 'kyc',
+        loadChildren: () => import('./views/e-kyc/e-kyc.module').then(m => m.EKycModule),
+
+      },
+      {
+        path: 'buttons',
+        loadChildren: () => import('./views/buttons/buttons.module').then(m => m.ButtonsModule)
+      },
+      {
+        path: 'charts',
+        loadChildren: () => import('./views/chartjs/chartjs.module').then(m => m.ChartJSModule)
+      },
+      {
+        path: 'dashboard',
+        loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
+      },
+      {
+        path: 'icons',
+        loadChildren: () => import('./views/icons/icons.module').then(m => m.IconsModule)
+      },
+      {
+        path: 'notifications',
+        loadChildren: () => import('./views/notifications/notifications.module').then(m => m.NotificationsModule)
+      },
+      {
+        path: 'theme',
+        loadChildren: () => import('./views/theme/theme.module').then(m => m.ThemeModule)
+      },
+      {
+        path: 'widgets',
+        loadChildren: () => import('./views/widgets/widgets.module').then(m => m.WidgetsModule)
+      }
+    ]
+  },
+  { path: '**', component: P404Component }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes,{onSameUrlNavigation: 'reload'})],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+
+

@@ -1,0 +1,188 @@
+{
+    "pages": [
+
+        {
+            "pageId": 2,
+            "pageTitle": "Campaigns",
+            "sections": [
+                {
+                    "sectionName": "Aggreation Report",
+                    "fields": [
+                        {
+                            "type": "LINK",
+                            "fieldName": "Loan Performance By Tranche"
+                        },
+                        {
+                            "type": "LINK",
+                            "fieldName": "Daily Disbursement And Recovery"
+                        },
+                        {
+                            "type": "LINK",
+                            "fieldName": "Daily New Loan Summary"
+                        },
+                        {
+                            "type": "iframe",
+                            "fieldName": "Daily New Loan Summary",
+                            "src": "https://link-to-url.com/path/to/iframe",
+                            "width": "300",
+                            "height": "200",
+                            "title": "Some Iframe title"
+                        },
+                        {
+                            "type": "LINK",
+                            "fieldName": "Age Analysis"
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "Transaction Report",
+                    "fields": [
+                        {
+                            "type": "LINK",
+                            "fieldName": "Customers"
+                        },
+                        {
+                            "type": "LINK",
+                            "fieldName": "Receipts"
+                        },
+                        {
+                            "type": "LINK",
+                            "fieldName": "USSD Sessions"
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "Generate Email Reports",
+                    "fields": [
+                        {
+                            "type": "LINK",
+                            "fieldName": "Generate Report"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "pageId": 2,
+            "pageTitle": "Campaigns",
+            "sections": [
+                {
+                    "sectionName": "Aggreation Report",
+                    "fields": [
+                        {
+                            "type": "LINK",
+                            "fieldName": "Loan Performance By Tranche"
+                        },
+                        {
+                            "type": "LINK",
+                            "fieldName": "Daily Disbursement And Recovery"
+                        },
+                        {
+                            "type": "LINK",
+                            "fieldName": "Daily New Loan Summary"
+                        },
+                        {
+                            "type": "iframe",
+                            "fieldName": "Daily New Loan Summary",
+                            "src": "https://link-to-url.com/path/to/iframe",
+                            "width": "300",
+                            "height": "200",
+                            "title": "Some Iframe title"
+                        },
+                        {
+                            "type": "LINK",
+                            "fieldName": "Age Analysis"
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "Transaction Report",
+                    "fields": [
+                        {
+                            "type": "LINK",
+                            "fieldName": "Customers"
+                        },
+                        {
+                            "type": "LINK",
+                            "fieldName": "Receipts"
+                        },
+                        {
+                            "type": "LINK",
+                            "fieldName": "USSD Sessions"
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "Generate Email Reports",
+                    "fields": [
+                        {
+                            "type": "LINK",
+                            "fieldName": "Generate Report"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "pageId": 2,
+            "pageTitle": "Campaigns",
+            "sections": [
+                {
+                    "sectionName": "Aggreation Report",
+                    "fields": [
+                        {
+                            "type": "LINK",
+                            "fieldName": "Loan Performance By Tranche"
+                        },
+                        {
+                            "type": "LINK",
+                            "fieldName": "Daily Disbursement And Recovery"
+                        },
+                        {
+                            "type": "LINK",
+                            "fieldName": "Daily New Loan Summary"
+                        },
+                        {
+                            "type": "iframe",
+                            "fieldName": "Daily New Loan Summary",
+                            "src": "https://link-to-url.com/path/to/iframe",
+                            "width": "300",
+                            "height": "200",
+                            "title": "Some Iframe title"
+                        },
+                        {
+                            "type": "LINK",
+                            "fieldName": "Age Analysis"
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "Transaction Report",
+                    "fields": [
+                        {
+                            "type": "LINK",
+                            "fieldName": "Customers"
+                        },
+                        {
+                            "type": "LINK",
+                            "fieldName": "Receipts"
+                        },
+                        {
+                            "type": "LINK",
+                            "fieldName": "USSD Sessions"
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "Generate Email Reports",
+                    "fields": [
+                        {
+                            "type": "LINK",
+                            "fieldName": "Generate Report"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

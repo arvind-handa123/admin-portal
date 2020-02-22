@@ -1,0 +1,119 @@
+<table class="table border">
+  <thead [ngClass]="isArray(tableData) && tableData.length > 0 && showDocumentsTable && 'bg-secondary'">
+    <tr>
+      <th *ngIf="!showDocumentsTable" scope="col">Retailer Id</th>
+      <th *ngIf="showDocumentsTable" scope="col">Sl No.</th>
+      <th scope="col" *ngFor="let header of columnHeaders; let i = index">{{header}}</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="!showDocumentsTable">
+    <tr *ngFor="let retailer of retailers; let i = index">
+      <th scope="row">{{retailer[0].retailerId}}</th>
+      <td>
+        {{retailer[0].sections[0].groups[1].fields[6] ? retailer[0].sections[0].groups[1].fields[6].savedData : 'N/A'}}
+      </td>
+      <td>
+        {{retailer[0].sections[0].groups[1].fields[3] ? retailer[0].sections[0].groups[1].fields[3].savedData : 'N/A'}}
+      </td>
+      <td>
+        <a routerLink="/kyc/{{section.split(' ').join('-').toLowerCase()}}/{{retailer[0].retailerId}}"
+          (click)="setRetailerData(retailer)">{{retailer[0].sections[0].groups[0].fields[0].savedData}}
+          {{retailer[0].sections[0].groups[0].fields[2].savedData}}</a></td>
+      <td>
+        {{retailer[1].sections[0].groups[2].fields[0] ? retailer[1].sections[0].groups[2].fields[0].savedData : 'N/A'}}
+      </td>
+      <td style="width: 12em;">
+        <span *ngFor="let field of retailer[0].sections[0].groups[3].fields; let f = index">
+          {{field.savedData}}
+        </span>
+      </td>
+      <td>
+        {{retailer[0].sections[0].groups[0].fields[3].savedData ? retailer[0].sections[0].groups[0].fields[3].savedData : 'N/A'}}
+      </td>
+      <td>
+
+        {{tableData && tableData.pagesDTOs[i] && tableData.pagesDTOs[i].lastUpdatedTime | date:'MMM d, y hh:mm:ss a':'UTC'}}
+      </td>
+    </tr>
+  </tbody>
+
+  <tbody *ngIf="isArray(tableData) && tableData.length > 0 && showDocumentsTable">
+    <tr *ngFor="let data of tableData; let i = index">
+      <th scope="row">{{data.displayOrder}}</th>
+      <td>{{data.documentFor}}</td>
+      <td class="font-weight-bold">{{data.documentName}}
+        <i class="fa fa-check text-success mx-1" *ngIf="isUpload && data.uploadedDisclaimerdocRecieved"
+          aria-hidden="true"></i>
+      </td>
+      <td *ngIf="!isUpload">
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group mr-1 mb-1" role="group" aria-label="First group">
+            <button class="px-4" mat-flat-button color="primary" (click)="downloadKycDocument(data.fileName)">
+              View
+            </button>
+          </div>
+        </div>
+      </td>
+      <td *ngIf="isUpload">
+        <div class="custom-file bordr border-dark rounded row">
+          <input type="file" class="custom-file-input d-inline" style="width: 65%;" [id]="data.documentType"
+            (input)="updateFile($event)">
+          <label class="custom-file-label d-inline" style="width: 65%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;"
+            [for]="data.documentType">{{fileData[data.documentType] ? fileData[data.documentType].name : 'Choose File'}}</label>
+          <button mat-raised-button color="primary" class="btn-sm mx-3 bg-primary d-inline"
+            (click)="uploadFile(data.documentName, data.documentType)">
+            <mat-icon>cloud_upload</mat-icon>
+            Upload
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="row w-100" *ngIf="!showDocumentsTable">
+  <div class="col-xs-12 col-12">
+    <!-- <pagination [id]="retailerId" [boundaryLinks]="true" [totalItems]="profileCount" [(ngModel)]="currentPage" [itemsPerPage]="5"
+      [maxSize]="5" previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"
+      (pageChanged)="pageChanged.emit($event)">
+    </pagination> -->
+    <app-custom-pagination class="pagination-sm float-right" [totalItems]="profileCount" [itemsPerPage]="5"
+      (pageChange)="pageChange($event)"></app-custom-pagination>
+  </div>
+</div>
+
+<button *ngIf="isArray(tableData) && tableData.length > 0 && showDocumentsTable && isUpload" [disabled]="isFileDataEmpty" type="button"
+  class="btn btn-primary btn-lg btn-block" (click)="bulkUploadFile()">Upload All</button>
+
+<app-footer-button *ngIf="isArray(tableData) && tableData.length > 0 && showDocumentsTable && !isUpload"
+  [iconLabel]="'Upload Documents'" [iconName]="'cloud_upload'" [rLink]="['/kyc/upload-docs/',r_id, {msisdn:msisdn}]">
+</app-footer-button>
+
+<app-footer-button *ngIf="isArray(tableData) && tableData.length > 0 && showDocumentsTable && isUpload"
+  [iconLabel]="'Generate LOC'" [allDocsRecieved]="allDocsRecieved" [iconName]="'build'"
+  (buttonClickEvent)="generateLOC()">
+</app-footer-button>
+
+<button hidden type="button" class="btn btn-primary" id="modal-launcher" data-toggle="modal"
+  data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body" id="exampleModalBody" style="height:77vh;"></div>
+      <div class="modal-footer text-center">
+        <a *ngIf="!locGenerated" type="button" [routerLink]="['/kyc/approved/',r_id, {edit:true}]"
+          class="btn btn-primary px-5" data-dismiss="modal">Edit</a>
+        <button *ngIf="locGenerated" (click)="issueLOC()" class="btn btn-primary px-5" data-dismiss="modal">Issue
+          LOC</button>
+        <button type="button" class="btn btn-dark px-4" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

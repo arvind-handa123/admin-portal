@@ -1,0 +1,22 @@
+{
+  "items":[
+    {
+      "type": "form",
+      "fields": [
+        {
+          "name":"Select Task",
+          "field_type":"select",
+          "values" : [
+            "Create/ Reset Agent"
+          ]
+        },
+        {
+          "name": "Field Details",
+          "field_type": "file_input",
+          "default_value":"",
+          "values":[]
+        }
+      ]
+    }
+  ]
+}

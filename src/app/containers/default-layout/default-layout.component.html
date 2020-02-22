@@ -1,0 +1,25 @@
+<app-custom-app-header [navbarBrandRouterLink]="[navItems[0].url]" [fixed]="true" [navbarBrandFull]="selectedBrand"
+  [navbarBrandMinimized]="{src: 'assets/img/brand/sygnet.svg', width: 30, height: 30, alt: 'CoreUI Logo'}"
+  [sidebarToggler]="'lg'" [asideMenuToggler]="'lg'">
+  <app-navbar></app-navbar>
+</app-custom-app-header>
+<div class="app-body">
+  <app-sidebar #appSidebar [fixed]="true" [display]="'lg'" [minimized]="sidebarMinimized"
+    (minimizedChange)="toggleMinimize($event)">
+    <app-sidebar-nav [navItems]="navItems ? navItems : []" [perfectScrollbar] [disabled]="appSidebar.minimized">
+    </app-sidebar-nav>
+    <app-sidebar-minimizer></app-sidebar-minimizer>
+  </app-sidebar>
+  <main class="main">
+    <cui-breadcrumb>
+    </cui-breadcrumb>
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>
+<app-footer>
+  <span><a href="https://coreui.io">YABX</a> &copy; 2018 creativeLabs.</span>
+  <span class="ml-auto">Powered by <a href="https://coreui.io/angular">YABX</a></span>
+  <button type="button" class="btn btn-primary btn-sm mx-2" *ngIf="showPortalSwitch" (click)="switchPortal()">Switch App</button>
+</app-footer>

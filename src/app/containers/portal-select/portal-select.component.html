@@ -1,0 +1,9 @@
+<div class="container m-auto w-50" style="margin-top: 10rem !important;">
+  <div class="jumbotron">
+    <h3 class="text-center">Welcome!! Please select your Application.</h3>
+    <select class="form-control select-portal" (change)="onPortalSelection($event)">
+      <option>Select One</option>
+      <option *ngFor="let item of accessObj | keyvalue" [value]="item.key">{{item.value}}</option>
+    </select>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th scope="col" *ngFor="let header of columnHeaders" class="text-capitalize">{{header}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let column of columnData; let i = index">
+      <td *ngFor="let data of column">{{data.savedData ? data.savedData : 'N/A'}}</td>
+    </tr>
+  </tbody>
+</table>

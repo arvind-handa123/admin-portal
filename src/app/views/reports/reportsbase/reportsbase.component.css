@@ -1,0 +1,24 @@
+.card-header{
+  cursor:pointer;
+}
+
+iframe {
+  border: 1px solid black;
+  width: 100%;
+}
+
+.output {
+  background: #eee;
+}
+
+.reports h3 {
+  background: var(--reports-header-background);
+  color: var(--reports-header-color);
+  padding: var(--reports-header-padding);
+  cursor: pointer;
+  border: var(--reports-border)
+}
+
+.reports .collapse {
+  border: var(--reports-border)
+}

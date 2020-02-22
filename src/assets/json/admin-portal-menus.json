@@ -1,0 +1,105 @@
+{
+    "menu_items": [
+        {
+            "title": "Reports",
+            "submenu_items": [],
+            "user_access": [
+                "admin",
+                "agent",
+                "consumer"
+            ]
+        },
+        {
+            "title": "Campaigns",
+            "submenu_items": [],
+            "user_access": [
+                "admin",
+                "agent",
+                "consumer"
+            ]
+        },
+        {
+            "title": "Batch Process",
+            "submenu_items": [],
+            "user_access": [
+                "admin",
+                "agent",
+                "consumer"
+            ]
+        },
+        {
+            "title": "Product Config",
+            "submenu_items": [],
+            "user_access": [
+                "admin",
+                "agent",
+                "consumer"
+            ]
+        },
+        {
+            "title": "Credit Rules",
+            "submenu_items": [],
+            "user_access": [
+                "admin",
+                "agent",
+                "consumer"
+            ]
+        },
+        {
+            "title": "Access Control",
+            "submenu_items": [
+                {
+                    "title": "Manage Rules",
+                    "submenu_items": [],
+                    "user_access": [
+                        "admin",
+                        "agent",
+                        "consumer"
+                    ]
+                },
+                {
+                    "title": "Manage Users",
+                    "submenu_items": [],
+                    "user_access": [
+                        "admin",
+                        "agent",
+                        "consumer"
+                    ]
+                }
+            ],
+            "user_access": [
+                "admin",
+                "agent",
+                "consumer"
+            ]
+        },
+        {
+            "title": "Management",
+            "submenu_items": [
+                {
+                    "title": "Wallet",
+                    "submenu_items": [],
+                    "user_access": [
+                        "admin",
+                        "agent",
+                        "consumer"
+                    ]
+                },
+                {
+                    "title": "Wallet Threshold",
+                    "submenu_items": [],
+                    "user_access": [
+                        "admin",
+                        "agent",
+                        "consumer"
+                    ]
+                }
+            ],
+            "user_access": [
+                "admin",
+                "agent",
+                "consumer"
+            ]
+        }
+    ]
+}

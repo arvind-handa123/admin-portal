@@ -1,0 +1,13 @@
+{
+  "menu_items": [
+      {
+          "title": "Reports",
+          "submenu_items": [],
+          "user_access": [
+              "admin",
+              "agent",
+              "consumer"
+          ]
+      }
+  ]
+}

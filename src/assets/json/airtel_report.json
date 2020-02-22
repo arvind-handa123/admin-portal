@@ -1,0 +1,48 @@
+{
+	"pageId": 1,
+	"pageTitle": "Reports",
+	"sections": [{
+			"sectionName": "Aggreation Report",
+			"fields": [{
+					"type": "LINK",
+					"fieldName": "Loan Performance By Tranche"
+				},
+				{
+					"type": "LINK",
+					"fieldName": "Daily Disbursement And Recovery"
+				},
+				{
+					"type": "LINK",
+					"fieldName": "Daily New Loan Summary"
+				},
+				{
+					"type": "LINK",
+					"fieldName": "Age Analysis"
+				}
+			]
+		},
+		{
+			"sectionName": "Transaction Report",
+			"fields": [{
+					"type": "LINK",
+					"fieldName": "Customers"
+				},
+				{
+					"type": "LINK",
+					"fieldName": "Receipts"
+				},
+				{
+					"type": "LINK",
+					"fieldName": "USSD Sessions"
+				}
+			]
+		},
+		{
+			"sectionName": "Generate Email Reports",
+			"fields": [{
+				"type": "LINK",
+				"fieldName": "Generate Report"
+			}]
+		}
+	]
+}
