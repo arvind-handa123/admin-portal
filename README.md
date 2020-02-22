@@ -1,2 +1,5 @@
 # admin-portal
- amdin portal project in angular
+Admin portal(reporting portal) project in angular-8
+## Login 
+
+
